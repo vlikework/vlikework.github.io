@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Hello World | vlikework
+      快速多机执行命令工具mrun | vlikework
     
   </title>
   <meta name="author" content="vlikework">
@@ -135,7 +135,7 @@ ga('send', 'pageview');
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《Hello World》
+						当前文章&nbsp;:&nbsp;《快速多机执行命令工具mrun》
 					
 				</p>
 				<!-- Progress bar -->
@@ -292,8 +292,8 @@ ga('send', 'pageview');
 
 	<div class="article-title">
 		
-	<a href="/2019/03/02/hello-world/" itemprop="url">
-		Hello World
+	<a href="/2019/05/10/script-for-running-ssh-commands/" itemprop="url">
+		快速多机执行命令工具mrun
 	</a>
 
 	</div>
@@ -302,17 +302,17 @@ ga('send', 'pageview');
 		<span>
 			
 	发布于
-	<a href="/2019/03/02/hello-world/" itemprop="url">
-		<time datetime="2019-03-02T09:30:20.833Z" itemprop="datePublished">
-	  		2019-03-02
+	<a href="/2019/05/10/script-for-running-ssh-commands/" itemprop="url">
+		<time datetime="2019-05-10T05:13:28.000Z" itemprop="datePublished">
+	  		2019-05-10
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/03/02/hello-world/" itemprop="url">
-		<time datetime="2019-03-02T09:30:20.833Z" itemprop="dateUpdated">
-	  		2019-02-28
+	<a href="/2019/05/10/script-for-running-ssh-commands/" itemprop="url">
+		<time datetime="2019-05-10T05:13:28.000Z" itemprop="dateUpdated">
+	  		2019-05-10
 	  </time>
 	</a> 	
 
@@ -321,11 +321,21 @@ ga('send', 'pageview');
 		<span>
 			<i class="fa fa-tags"></i>
 			
+	
+		<a href="/tags/Shell/" class=" ">
+			Shell
+		</a>
+	
+		<a href="/tags/Linux/" class=" ">
+			Linux
+		</a>
+	
+
 		</span>
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/03/02/hello-world/_visitors" data-url="/2019/03/02/hello-world/" data-title="Hello World">
+    <span class="leancloud_visitors" id="/2019/05/10/script-for-running-ssh-commands/_visitors" data-url="/2019/05/10/script-for-running-ssh-commands/" data-title="快速多机执行命令工具mrun">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -334,7 +344,7 @@ ga('send', 'pageview');
 
 
 
-    <span class="leancloud_likes" id="/2019/03/02/hello-world/_likes" data-url="/2019/03/02/hello-world/" data-title="Hello World" rel="unlike">
+    <span class="leancloud_likes" id="/2019/05/10/script-for-running-ssh-commands/_likes" data-url="/2019/05/10/script-for-running-ssh-commands/" data-title="快速多机执行命令工具mrun" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -343,23 +353,62 @@ ga('send', 'pageview');
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+		<blockquote>
+<p>是否经常需要多台主机执行同一条(组)命令？<br>对于没有配置免密码认证的主机如何批量多主机执行同一条(组)命令？<br>今天就来介绍一个脚本工具，可以帮助我们解决以上两个问题，并且可以在此命令工具基础上衍生出更多的命令工具来。</p>
+</blockquote>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在生产系统的运过程中，我们经常需要在一个集群中的多台主机执行同一个命令（例如查看某个进程服务是否在运行/某个端口是否被监听 或者 执行一个启动脚本来启动某个服务等等）的时候，那么我们可能会写一大段脚本来实现这个功能，很是费时。<br>如果你是Web开发人员，对脚本编写不熟悉就更是头大。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>这个问题有很多复杂的解决方法，使用很多大公司开源软件进行管理，不过这需要在每台主机上部署一个服务端服务，保证可以管理主机的系统，适合比较大型的集群综合服务管理。</p>
+<p>今天介绍的是一个非常简单的shell脚本，就可以实现批量远程<code>ssh</code>执行特殊命令，它就是 <code>mrun</code>. 当然它只是一个脚本，如果你想要增加功能可以留言，或者自己动手去更新它。代码在 [这里获取(<a href="https://github.com/Awkee/auto_ssh_scripts)" target="_blank" rel="noopener">https://github.com/Awkee/auto_ssh_scripts)</a>.</p>
+<p>下面我们就来介绍一下 <code>mrun</code>命令的使用吧！</p>
+<h2 id="mrun命令使用介绍"><a href="#mrun命令使用介绍" class="headerlink" title="mrun命令使用介绍"></a>mrun命令使用介绍</h2><blockquote>
+<p>先来看下这个命令的使用方法，之后再去了解如何部署此脚本工具吧</p>
+</blockquote>
+<pre><code>
+使用说明:
+    mrun [-q -b ] [-e -u username -p password] &lt;ip-list&gt; &lt;cmds&gt;
+
+功能说明:
+    此工具帮助我们在多主机批量执行同一任务工作，比如批量开机/关机/批量查看主机参数信息等
+
+参数说明：
+    -q    : 安静模式，不会输出分割线信息等提示信息，只会输出命令执行结果
+    -b    : 后台运行模式， 命令会提交到后台运行，但是会在最后等待他们执行完成后再退出脚本命令.注意的是输出结果可能会混乱，因为无法控制每个后台进程的完成时间.
+    [-e -u username -p password]    :可选参数，默认使用当前登录用户并且可以免认证访问所有主机，如果设置此选项标识需要使用expect命令在指定username下批量执行&lt;cmd&gt;命令,如果username不指定就取默认当前登录用户名
+    &lt;ip|ip-list&gt;    : 此参数可以是确定的IP地址如192.168.1.2，也可以是指定的IP范围,示例:192.168.1.2-44,在默认情况下使用的是当前登录用户访问指定IP地址列表,支持逗号指定离散IP列表，也支持减号指定连续IP列表,192.168.2.2-5,192.168.3.2-10,192.168.4.5-20,192.168.5.6
+    &lt;cmds&gt;    : 此参数为需要在指定的IP地址下执行的命令语句。
+
+示例:
+    mrun 192.168.1.2-23 &#39;hostname;ls -l ~/.ssh/*.pub&#39; : 使用默认的当前登录用户进行免密码认证执行命令
+    mrun -u myuser 192.168.1.2-23 &#39;hostname;ls -l ~/.ssh/*.pub&#39;  : 使用myuser用户进行免密码认证执行命令
+    mrun -e -u testuser -p testpassword 192.168.1.2-23 &#39;hostname;ls -l ~/.ssh/*.pub&#39; : 使用testuser用户进行自动输入密码方式执行命令
+</code></pre><h2 id="脚本命令的组成和安装介绍"><a href="#脚本命令的组成和安装介绍" class="headerlink" title="脚本命令的组成和安装介绍"></a>脚本命令的组成和安装介绍</h2><h3 id="脚本依赖组成分两部分"><a href="#脚本依赖组成分两部分" class="headerlink" title="脚本依赖组成分两部分:"></a>脚本依赖组成分两部分:</h3><p>使用前提: 在不输入密码的使用情况下，需要将所有需要控制的集群配置ssh免密码认证访问，如果不想配置可以安装<code>expect</code>命令，通过传入参数进行执行即可。</p>
+<p><code>mrun</code> ： shell脚本文件;<br><code>auto_ssh_run.exp</code> ：一个<code>expect</code>脚本文件，用于自动登录没有配置免密码认证的主机，需要提前在部署<code>mrun</code>的主机上安装<code>expect</code>命令即可。</p>
+<h3 id="部署方式："><a href="#部署方式：" class="headerlink" title="部署方式："></a><strong>部署方式：</strong></h3><p>只需要将<code>mrun</code>和 <code>auto_ssh_run.exp</code> 两个脚本放到<code>$PATH</code>变量可以访问到的路径下就可以，比如我的放到了<code>${HOME}/bin/</code>目录下。</p>
+<p>将 <code>export PATH=$PATH:${HOME}/bin</code> 这一行添加到 <code>.bashrc</code> (如果没有这个文件在查找一下.bash_profile或者.profile文件)环境变量文件，这样以后每次登录就可以直接使用<code>mrun</code>命令了。</p>
+<pre><code>$ test -d ${HOME}/bin |||  mkdir ${HOME}/bin
+$ export PATH=$PATH:${HOME}/bin
+$ wget https://github.com/Awkee/auto_ssh_scripts/archive/latest.tar.gz
+$ tar zxvf ./latest.tar.gz
+$ cd auto_ssh_scripts-latest
+$ chmod +x  auto_ssh_run.exp mrun
+$ cp auto_ssh_run.exp mrun ${HOME}/bin
+$  mrun 127.0.0.1 &#39;hostname&#39;
+ -&gt;命令执行时间:[20190510 13:05:46]&lt;- 
+testhost01
+&gt;---------------------------end line info:[ip:127.0.0.1 , user:testuser , cmd:hostname]---[分割线]--&lt;
+
+</code></pre><p><em>注意:需要给以上两个脚本工具赋权可执行权限的.</em></p>
+<h2 id="代码获取"><a href="#代码获取" class="headerlink" title="代码获取"></a>代码获取</h2><p>代码可以到github网站上获取, <a href="https://github.com/Awkee/auto_ssh_scripts" target="_blank" rel="noopener">点击进入</a></p>
+<p>可以直接使用<code>git</code>命令克隆到本地即可。</p>
+<pre><code>git clone git@github.com:Awkee/auto_ssh_scripts.git
+</code></pre><blockquote>
+<p>如果您有什么更好的方法，可以给我留言或者邮件我。</p>
+</blockquote>
+<hr>
 
 	</div>
 
-	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+	<div id="current-post-cover" data-scr="/img/post-cover/SSH-1.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -373,12 +422,8 @@ ga('send', 'pageview');
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/05/10/script-for-running-ssh-commands/" title="快速多机执行命令工具mrun" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/03/02/install-android6-0-on-rpi3/" title="在树莓派3上安装Android6.0系统体验" rel="next">
+			<a href="/2019/03/02/hello-world/" title="Hello World" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -393,25 +438,6 @@ ga('send', 'pageview');
 
 <div class="relate-post">
 	<ul>
-		
-				<li>
-					<div>
-						<a href="/2019/05/10/script-for-running-ssh-commands/" title="快速多机执行命令工具mrun">
-							快速多机执行命令工具mrun
-						</a>
-						<p>
-							
-是否经常需要多台主机执行同一条(组)命令？对于没有配置免密码认证的主机如何批量多主机执行同一条(组)命令？今天就来介绍一个脚本工具，可以帮助我们解决以上两个问题，并且可以在此命令工具基础上衍生出更多的命令工具来。
-
-问题在生产系统的...
-						</p>
-					</div>
-
-					<a href="/2019/05/10/script-for-running-ssh-commands/" title="快速多机执行命令工具mrun">				
-						<img src="/img/post-cover/SSH-1.jpg" class="relateImg" alt="快速多机执行命令工具mrun">
-					</a>
-				</li>											
-		
 		
 				<li>
 					<div>
@@ -431,6 +457,22 @@ ga('send', 'pageview');
 
 					<a href="/2019/03/02/install-android6-0-on-rpi3/" title="在树莓派3上安装Android6.0系统体验">				
 						<img src="/img/post-cover/raspberry-pi-android-support-google.jpg" class="relateImg" alt="在树莓派3上安装Android6.0系统体验">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/03/02/hello-world/" title="Hello World">
+							Hello World
+						</a>
+						<p>
+							Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using ...
+						</p>
+					</div>
+
+					<a href="/2019/03/02/hello-world/" title="Hello World">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="Hello World">
 					</a>
 				</li>											
 		
