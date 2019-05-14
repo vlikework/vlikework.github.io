@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      在树莓派3上安装Android6.0系统体验 | vlikework
+      刷机之斐讯路由器K2尝试华硕Padavan固件 | vlikework
     
   </title>
   <meta name="author" content="vlikework">
@@ -135,7 +135,7 @@ ga('send', 'pageview');
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《在树莓派3上安装Android6.0系统体验》
+						当前文章&nbsp;:&nbsp;《刷机之斐讯路由器K2尝试华硕Padavan固件》
 					
 				</p>
 				<!-- Progress bar -->
@@ -292,8 +292,8 @@ ga('send', 'pageview');
 
 	<div class="article-title">
 		
-	<a href="/2019/03/02/install-android6-0-on-rpi3/" itemprop="url">
-		在树莓派3上安装Android6.0系统体验
+	<a href="/2019/05/14/shuaji-k2-Padavan/" itemprop="url">
+		刷机之斐讯路由器K2尝试华硕Padavan固件
 	</a>
 
 	</div>
@@ -302,17 +302,17 @@ ga('send', 'pageview');
 		<span>
 			
 	发布于
-	<a href="/2019/03/02/install-android6-0-on-rpi3/" itemprop="url">
-		<time datetime="2019-03-01T16:00:00.000Z" itemprop="datePublished">
-	  		2019-03-02
+	<a href="/2019/05/14/shuaji-k2-Padavan/" itemprop="url">
+		<time datetime="2019-05-14T06:28:49.000Z" itemprop="datePublished">
+	  		2019-05-14
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/03/02/install-android6-0-on-rpi3/" itemprop="url">
-		<time datetime="2019-03-01T16:00:00.000Z" itemprop="dateUpdated">
-	  		2019-03-02
+	<a href="/2019/05/14/shuaji-k2-Padavan/" itemprop="url">
+		<time datetime="2019-05-14T06:28:49.000Z" itemprop="dateUpdated">
+	  		2019-05-14
 	  </time>
 	</a> 	
 
@@ -322,12 +322,8 @@ ga('send', 'pageview');
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/树莓派/" class=" ">
-			树莓派
-		</a>
-	
-		<a href="/tags/Android/" class=" ">
-			Android
+		<a href="/tags/路由器刷机/" class=" ">
+			路由器刷机
 		</a>
 	
 
@@ -335,7 +331,7 @@ ga('send', 'pageview');
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/03/02/install-android6-0-on-rpi3/_visitors" data-url="/2019/03/02/install-android6-0-on-rpi3/" data-title="在树莓派3上安装Android6.0系统体验">
+    <span class="leancloud_visitors" id="/2019/05/14/shuaji-k2-Padavan/_visitors" data-url="/2019/05/14/shuaji-k2-Padavan/" data-title="刷机之斐讯路由器K2尝试华硕Padavan固件">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -344,7 +340,7 @@ ga('send', 'pageview');
 
 
 
-    <span class="leancloud_likes" id="/2019/03/02/install-android6-0-on-rpi3/_likes" data-url="/2019/03/02/install-android6-0-on-rpi3/" data-title="在树莓派3上安装Android6.0系统体验" rel="unlike">
+    <span class="leancloud_likes" id="/2019/05/14/shuaji-k2-Padavan/_likes" data-url="/2019/05/14/shuaji-k2-Padavan/" data-title="刷机之斐讯路由器K2尝试华硕Padavan固件" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -353,69 +349,70 @@ ga('send', 'pageview');
 	</div>
 
 	<div class="article-content" id="article-content">
-		<blockquote>
-<p>最近刚刚买了一个树莓派3，之前买过第一代，但是性能比较低，所以买了这个高性能的体验一下。以下就是在树莓派3代上安装android6.0镜像的体验。</p>
+		<p>为什么是斐讯K2(PSG1218)路由器？ 斐讯K2路由器的<code>0元购</code>活动，399元购买–&gt;K2序列号绑定联币理财账户–&gt;1月后返回399元+3元利息-&gt;提现到银行卡。<br>当然，现在对于“斐迅”的“零元购”只能呵呵了（因为联币金融已经跑路啦！！）。</p>
+<p><img src="/img/post-cover/router-k3.jpg" alt></p>
+<p>斐讯路由器K2尝试华硕Padavan固件，本次分两种情况介绍刷固件的过程：</p>
+<ol>
+<li>联网情况下的一键刷固件方法</li>
+<li>不联网下的手工刷固件方法</li>
+</ol>
+<p>第一种一键刷路由固件的方式，我尝试的时候出现了<code>404</code>页面，可能已经不能使用这种方式了，因此第二种方式就有了用武之地了。</p>
+<h1 id="K2路由器刷固件的步骤说明"><a href="#K2路由器刷固件的步骤说明" class="headerlink" title="K2路由器刷固件的步骤说明"></a>K2路由器刷固件的步骤说明</h1><h2 id="第一种，具备联外网的情况"><a href="#第一种，具备联外网的情况" class="headerlink" title="第一种，具备联外网的情况"></a>第一种，具备联外网的情况</h2><p>1，首先保证当前使用的K2可以正常上网。<br>2，使用网线，将路由器与电脑连接。<br>3，拔掉K2电源。<br>4，按住Reset键，插上电源，10秒后松开Reset键。<br>5，访问斐讯默认后台地址192.168.2.1，默认账户密码admin。<br>6，开始刷机，有两种方式，一个标点符号都不要少，否则变砖完蛋：</p>
+<p><strong>方式1：只刷入Breed，在Chrome地址栏打开下面的链接：</strong></p>
+<pre><code>http://192.168.2.1/goform/gra_NTPSyncWithLocal?text_year=&quot;2016|`if wget -O /tmp/breed.bin http://breed.hackpascal.net/breed-mt7620-phicomm-psg1208.bin;then mtd_write write /tmp/breed.bin Bootloader;echo breed ok! &gt;/etc_ro/web/index.asp;fi`&quot;
+</code></pre><p><strong>方式2：同时刷入Breed和华硕Padavan固件，在Chrome地址栏打开下面的链接：</strong></p>
+<pre><code>http://192.168.2.1/goform/gra_NTPSyncWithLocal?text_year=&quot;2016|`if wget -O /tmp/asus.sh http://code.taobao.org/svn/asus_bin/asus.sh;then sh /tmp/asus.sh;fi`&quot;
+</code></pre><p>7，等待一分钟，一定不要关闭，等待，等待。<br>8，出现以下画面，表示已经成功。此界面可能会跳转，可返回后，迅速点击 click here那句话。<br>9，重启路由，不行断电20秒再通电。shaoit.com<br>10，访问华硕Padavan默认地址192.168.123.1，输入默认账户密码admin，即可管理路由器。</p>
+<h2 id="第二种，不连接网络下刷路由器固件操作情况"><a href="#第二种，不连接网络下刷路由器固件操作情况" class="headerlink" title="第二种，不连接网络下刷路由器固件操作情况"></a>第二种，不连接网络下刷路由器固件操作情况</h2><blockquote>
+<p>其实离线就是提前将需要的固件下载到本地，然后再执行刷固件操作</p>
 </blockquote>
-<a id="more"></a>
-<p><img src="/img/page/rpi3.jpg" alt="树莓派3"></p>
-<p>先来看下rpi3(树莓派3代简称)的配置信息</p>
-<p>下面是关于树莓派三代与二代的详细硬件配置信息比对说明：</p>
-<pre><code>The Raspberry Pi 3 is the third generation Raspberry Pi. It replaced the Raspberry Pi 2 Model B in February 2016. Compared to the Raspberry Pi 2 it has:
-
-A 1.2GHz 64-bit quad-core ARMv8 CPU
-802.11n Wireless LAN
-Bluetooth 4.1
-Bluetooth Low Energy (BLE)
-
-Like the Pi 2, it also has:
-
-1GB RAM
-4 USB ports
-40 GPIO pins
-Full HDMI port
-Ethernet port
-Combined 3.5mm audio jack and composite video
-Camera interface (CSI)
-Display interface (DSI)
-Micro SD card slot (now push-pull rather than push-push)
-VideoCore IV 3D graphics core
-</code></pre><h1 id="开始为rpi3安装系统步骤"><a href="#开始为rpi3安装系统步骤" class="headerlink" title="开始为rpi3安装系统步骤"></a>开始为rpi3安装系统步骤</h1><pre><code>1. 准备条件说明
-2. 开始刻录镜像到SD卡
-3. 运行系统
-</code></pre><h1 id="详细说明操作步骤内容"><a href="#详细说明操作步骤内容" class="headerlink" title="详细说明操作步骤内容"></a>详细说明操作步骤内容</h1><h2 id="准备条件说明"><a href="#准备条件说明" class="headerlink" title="准备条件说明"></a>准备条件说明</h2><p>硬件准备：rpi3,micro SDcard class 10 (&gt;=8GB) , power (5v , &gt;=2A) 注意最好买比较正规牌子的电源，有些杂牌标记的与实际不符，这又可能导致rpi3运行系统时不稳定而启动失败，HDMI 连接线，显示器;无线键盘鼠标和接收器;<br>软件准备： <a href="http://www.mediafire.com/download/j0zcndz92cg0wwt/andrpi3-20160626.img.bz2" target="_blank" rel="noopener">Android6.0镜像</a>，Linux系统</p>
-<h2 id="开始刻录镜像系统到SD卡"><a href="#开始刻录镜像系统到SD卡" class="headerlink" title="开始刻录镜像系统到SD卡"></a>开始刻录镜像系统到SD卡</h2><ol>
-<li>我们先把<code>andrpi3-20160626.img.bz2</code>镜像下载下来</li>
-<li>用命令bzip2解压生成<code>andrpi3-20160626.img</code>镜像文件</li>
+<ol>
+<li>下载 <a href="http://breed.hackpascal.net/breed-mt7620-phicomm-psg1208.bin" target="_blank" rel="noopener">breed</a></li>
+<li>下载 <a href="https://eyun.baidu.com/s/3kV0JV19/" target="_blank" rel="noopener">华硕Padavan固件</a>，找到最新版本的<code>RT-AC54U-GPIO-1-PSG1208-64M_3.4.3.9-099.trx</code>文件下载下来。</li>
+<li>下载<a href="http://code.taobao.org/svn/asus_bin" target="_blank" rel="noopener">华硕Kernel文件</a> 。</li>
+<li>下载 [斐讯降级包]，链接: <a href="https://pan.baidu.com/s/1geGtOTd" target="_blank" rel="noopener">https://pan.baidu.com/s/1geGtOTd</a> 密码: u4rg</li>
 </ol>
-<pre><code>bzip2 -x andrpi3-20160626.img.bz2
-</code></pre><ol start="3">
-<li>将microSD卡接入电脑，查看接入时的设备名称（我的笔记本有两块硬盘分别是/dev/sda和/dev/sdb），假设为<code>/dev/sdc</code>，如果是使用SD卡槽接入就会显示为<code>/dev/mmcblk0</code></li>
-<li>使用dd命令将<code>andrpi3-20160626.img</code>写入到<code>/dev/sdc</code>中;</li>
-</ol>
-<pre><code>sudo dd if=andrpi3-20160626.img of=/dev/sdc bs=4M; sync
-</code></pre><ol start="5">
-<li>等待写入完成,卸载sd卡，完成了镜像写入工作。</li>
-</ol>
-<pre><code>umount /dev/sdc
-</code></pre><h2 id="运行系统"><a href="#运行系统" class="headerlink" title="运行系统"></a>运行系统</h2><blockquote>
-<p>注意： rpi3 的功耗比rpi大了很多，所以要使用5V/2A的电源才可以稳定运行，国内一些标记5V/2A的电源，很多都电压不稳，国外网上有人说电压低于4.7V左右时就会引起rpi3不稳定，因此如果遇到了此类问题，就直接更换一个好点的电源插头吧（我用的是锤子官方电源插头:)）。</p>
+<p>准备好了上述固件包，就可以开始刷了。</p>
+<h3 id="降级操作步骤。"><a href="#降级操作步骤。" class="headerlink" title="降级操作步骤。"></a>降级操作步骤。</h3><blockquote>
+<p>总结起来就是通过正常的升级流程把指定的低版本斐讯K2固件刷进去。</p>
 </blockquote>
-<p>将rpi3用HDMI线与显示器连接，插入键盘鼠标的无线接收器，再把刻录好的microSD卡插入rpi3卡槽，接通电源线，这样就开始了系统的运行。</p>
-<p>正常情况下，显示器会显示<code>Android</code>字样一段时间，等待一段时间后，就可以进入了欢迎界面了，这样我们就成功的在rpi3运行Android6.0系统了。</p>
-<h2 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h2><p>安装应用方法如下(适用于所有平台，前提安装好adb工具包)：</p>
-<pre><code>adb connect &quot;IP_ADDRESS&quot;
-adb install &quot;app_name.apk&quot;
-</code></pre><p>举个例子，我的rpi3的IP地址为192.168.1.101，安装影梭SS客户端：</p>
-<pre><code>$ adb connect  192.168.1.101
-$ adb install shadowsocks.apk
-1645 KB/s (6261140 bytes in 3.715s)
-    pkg: /data/local/tmp/shadowsocks.apk
-Success
-</code></pre><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://geektillithertz.com/wordpress/index.php/2016/04/09/raspberry-pi-3-android-6-0-marshmallow-download/" target="_blank" rel="noopener">Raspberry Pi 3 Android 6.0 Marshmallow [Download]</a><br><a href="https://www.youtube.com/watch?v=iUc2oJuxk6E" target="_blank" rel="noopener">Raspberry PI 3 How To Install Android 6.0.1 And Google Play</a></p>
+<ol>
+<li>插上路由器电源，用网线将电脑与路由器的LAN口连接起来。</li>
+<li>打开cmd命令窗口，执行<code>ipconfig</code>检查自己的IP地址，例如说是<code>192.168.2.9</code>，那么路由器地址为<code>192.168.2.1</code>。</li>
+<li>打开chrome浏览器，访问<code>http://192.168.2.1</code>地址，进行简单的快速配置就可以（此配置无所谓的），配置完毕后找到系统管理中的<code>手动升级</code>页面，点击<code>浏览</code>按钮，选择下载的<code>斐讯降级包</code> 文件，然后点击升级就可以了，此时就需要等待2-3分钟。</li>
+<li>升级成功后，就可以看到最底下的一行显示的版本信息了。</li>
+</ol>
+<h3 id="刷breed固件"><a href="#刷breed固件" class="headerlink" title="刷breed固件"></a>刷breed固件</h3><blockquote>
+<p>具体就是将<code>breed</code>固件上传到路由器上，再手工刷Bootloader<br>其中需要说的是，不需要开telnet服务，ssh服务是可用的，用户名和密码都是root。</p>
+</blockquote>
+<ol>
+<li>使用<code>secureCRT</code>之类的SSH客户端软件访问路由器的地址(目前这里应该是<code>192.168.2.1</code>) ，配置用户名密码都是root。</li>
+<li>连接上路由器后，将本地的<code>breed固件</code>上传到<code>/tmp</code>目录下，比如文件名叫做<code>breed-mt7620-phicomm-psg1208.bin</code>。</li>
+<li>上传完毕后，开始刷固件，执行的命令为<code>mtd write /tmp/breed-mt7620-phicomm-psg1208.bin Bootloader</code> ，这里需要说民下之前的一键刷固件使用的命令是<code>mtd_write</code>，而我后期实测并没有这个命令了，而有<code>mtd</code>命令就可以了，当然如果执行<code>mtd</code>命令报错，那可以尝试使用<code>mtd_write write /tmp/breed-mt7620-phicomm-psg1208.bin Bootloader</code> ，这个可能跟具体的斐讯的路由器底层系统版本有关。</li>
+<li>执行大概不到1分钟就完成了。之后可以重启到<code>breed</code>的界面，具体操作是这样的，拔掉电源-&gt;按住Reset按钮同时插上电源，按住Reset10秒左右就可以松手了。</li>
+<li>这时再查看下自己的ip地址<code>ipconfig</code>，例如是<code>192.168.1.9</code>，那么同理路由器地址就是<code>192.168.1.1</code>，通过chrome浏览器访问<code>http://192.168.1.1</code>页面了。</li>
+</ol>
+<h3 id="刷华硕Padavan固件"><a href="#刷华硕Padavan固件" class="headerlink" title="刷华硕Padavan固件"></a>刷华硕Padavan固件</h3><blockquote>
+<p>两种方法，第一种，通过浏览器页面使用的是<code>华硕Padavan固件</code>，文件名应该是”RT-AC54U-GPIO-1-PSG1208-64M_3.4.3.9-099.trx”;第二种，使用命令行方式刷Kernel,使用的文件名为”asus_bin”。</p>
+</blockquote>
+<h4 id="方法1：通过浏览器页面操作方式"><a href="#方法1：通过浏览器页面操作方式" class="headerlink" title="方法1：通过浏览器页面操作方式"></a>方法1：通过浏览器页面操作方式</h4><ol>
+<li>通过chrome浏览器访问<code>http://192.168.1.1</code>页面，找到<code>固件管理</code>中的<code>固件升级</code>，上传下载的<code>华硕Padavan固件</code>，点击开始升级。</li>
+<li>升级成功后会提示刷新成功，之后重启路由器就可以看到新的路由器管理页面了。</li>
+</ol>
+<h4 id="方法2：通过命令操作方式"><a href="#方法2：通过命令操作方式" class="headerlink" title="方法2：通过命令操作方式"></a>方法2：通过命令操作方式</h4><ol>
+<li>与刷<code>breed</code>方式相同，先通过ssh方式将<code>华硕Kernel文件</code>上传到路由器的<code>/tmp</code>目录下，比如文件名为<code>asus_bin</code>。</li>
+<li>然后执行<code>mtd write /tmp/asus_bin Kernel</code>命令开始刷kernel。</li>
+<li>刷成功后，重启路由器就可以看到新的路由器管理页面了。</li>
+</ol>
+<p>最后，刷新成功后，登录的地是就是<code>192.168.123.1</code>，默认的用户名和密码都是<code>admin</code> 。</p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><blockquote>
+<p>刷机有风险，以上总结为本人亲测可行，祝你刷机成功！若你在刷机过程中遇到了什么问题也可以与我交流，希望可以帮到你愉快的玩转K2路由器。</p>
+</blockquote>
+<hr>
 
 	</div>
 
-	<div id="current-post-cover" data-scr="/img/post-cover/raspberry-pi-android-support-google.jpg"></div>
+	<div id="current-post-cover" data-scr="/img/post-cover/router-k3.jpg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -429,10 +426,10 @@ Success
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/03/02/hello-world/" title="Hello World" rel="prev">
-				&laquo;上一篇
-			</a>
 		
+			<a href="/2019/05/10/script-for-running-ssh-commands/" title="快速多机执行命令工具mrun" rel="next">
+				下一篇&raquo;
+			</a>
 			
 	</span>
     
@@ -467,22 +464,6 @@ Success
 		
 				<li>
 					<div>
-						<a href="/2019/05/14/shuaji-k2-Padavan/" title="刷机之斐讯路由器K2尝试华硕Padavan固件">
-							刷机之斐讯路由器K2尝试华硕Padavan固件
-						</a>
-						<p>
-							为什么是斐讯K2(PSG1218)路由器？ 斐讯K2路由器的0元购活动，399元购买–&gt;K2序列号绑定联币理财账户–&gt;1月后返回399元+3元利息-&gt;提现到银行卡。当然，现在对于“斐迅”的“零元购”只能呵呵了（因为联...
-						</p>
-					</div>
-
-					<a href="/2019/05/14/shuaji-k2-Padavan/" title="刷机之斐讯路由器K2尝试华硕Padavan固件">				
-						<img src="/img/post-cover/router-k3.jpg" class="relateImg" alt="刷机之斐讯路由器K2尝试华硕Padavan固件">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
 						<a href="/2019/03/02/hello-world/" title="Hello World">
 							Hello World
 						</a>
@@ -493,6 +474,28 @@ Success
 
 					<a href="/2019/03/02/hello-world/" title="Hello World">				
 						<img src="/img/cart_cover.jpg" class="relateImg" alt="Hello World">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/03/02/install-android6-0-on-rpi3/" title="在树莓派3上安装Android6.0系统体验">
+							在树莓派3上安装Android6.0系统体验
+						</a>
+						<p>
+							
+最近刚刚买了一个树莓派3，之前买过第一代，但是性能比较低，所以买了这个高性能的体验一下。以下就是在树莓派3代上安装android6.0镜像的体验。
+
+
+
+先来看下rpi3(树莓派3代简称)的配置信息
+下面是关于树莓派三代与二代的详细...
+						</p>
+					</div>
+
+					<a href="/2019/03/02/install-android6-0-on-rpi3/" title="在树莓派3上安装Android6.0系统体验">				
+						<img src="/img/post-cover/raspberry-pi-android-support-google.jpg" class="relateImg" alt="在树莓派3上安装Android6.0系统体验">
 					</a>
 				</li>											
 		
