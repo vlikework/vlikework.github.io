@@ -106,8 +106,19 @@ var _hmt = _hmt || [];
                 <ul>
                     <li data-s="baidu" target="_blank"><i style="background-image: url(icon/baidu.svg);"></i>百度一下</li>
                     <li data-s="google" target="_blank"><i style="background-image: url(icon/g.svg);"></i>Google</li>
-                    <li data-s="duckduckgo" target="_blank"><i style="background-image: url(icon/duckduckgo.svg);"></i>Duckduckgo</li>
-                    <li data-s="startpage" target="_blank"><i style="background-image: url(icon/startpage.png);"></i>startpage</li>
+                </ul>
+                <ul>
+                  <li data-s="duckduckgo" target="_blank"><i style="background-image: url(icon/duckduckgo.svg);"></i>Duckduckgo</li>
+                  <li data-s="startpage" target="_blank"><i style="background-image: url(icon/startpage.png);"></i>startpage</li>
+                </ul>
+                <hr>
+                <ul>
+                  <h4>duckduckgo:</h4>
+                  <div class="searchengine">一款不追踪你的搜索引擎。</div>
+                </ul>
+                <ul>
+                  <h4>startpage:</h4>
+                  <div class="searchengine">The world's most private search engine.</div>
                 </ul>
             </div>
         </div>
@@ -127,7 +138,7 @@ var _hmt = _hmt || [];
                 $("form").attr('action', 'https://duckduckgo.com');
                 $("form").submit();
               } else if (nm=="startpage") {
-                $("form").attr('action', 'https://www.startpage.com');
+                $("form").attr('action', 'https://www.startpage.com/do/search');
                 $("form").submit();
               } else {
                 $("form").attr('action', 'https://www.baidu.com/s?ie=utf-8');
