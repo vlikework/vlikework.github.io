@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      在树莓派3上安装Android6.0系统体验 | vlikework
+      文本处理命令awk 实例学习参考 | vlikework
     
   </title>
   <meta name="author" content="vlikework">
@@ -150,7 +150,7 @@
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《在树莓派3上安装Android6.0系统体验》
+						当前文章&nbsp;:&nbsp;《文本处理命令awk 实例学习参考》
 					
 				</p>
 				<!-- Progress bar -->
@@ -311,8 +311,8 @@
 
 	<div class="article-title">
 		
-	<a href="/2019/03/02/install-android6-0-on-rpi3/" itemprop="url">
-		在树莓派3上安装Android6.0系统体验
+	<a href="/2019/06/05/awk001/" itemprop="url">
+		文本处理命令awk 实例学习参考
 	</a>
 
 	</div>
@@ -321,17 +321,17 @@
 		<span>
 			
 	发布于
-	<a href="/2019/03/02/install-android6-0-on-rpi3/" itemprop="url">
-		<time datetime="2019-03-01T16:00:00.000Z" itemprop="datePublished">
-	  		2019-03-02
+	<a href="/2019/06/05/awk001/" itemprop="url">
+		<time datetime="2019-06-05T05:42:21.000Z" itemprop="datePublished">
+	  		2019-06-05
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/03/02/install-android6-0-on-rpi3/" itemprop="url">
-		<time datetime="2019-03-01T16:00:00.000Z" itemprop="dateUpdated">
-	  		2019-03-02
+	<a href="/2019/06/05/awk001/" itemprop="url">
+		<time datetime="2019-06-05T05:42:21.000Z" itemprop="dateUpdated">
+	  		2019-06-05
 	  </time>
 	</a> 	
 
@@ -341,12 +341,16 @@
 			<i class="fa fa-tags"></i>
 			
 	
-		<a href="/tags/Android/" class=" ">
-			Android
+		<a href="/tags/Awk/" class=" ">
+			Awk
 		</a>
 	
-		<a href="/tags/树莓派/" class=" ">
-			树莓派
+		<a href="/tags/Linux/" class=" ">
+			Linux
+		</a>
+	
+		<a href="/tags/Shell/" class=" ">
+			Shell
 		</a>
 	
 
@@ -354,7 +358,7 @@
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/03/02/install-android6-0-on-rpi3/_visitors" data-url="/2019/03/02/install-android6-0-on-rpi3/" data-title="在树莓派3上安装Android6.0系统体验">
+    <span class="leancloud_visitors" id="/2019/06/05/awk001/_visitors" data-url="/2019/06/05/awk001/" data-title="文本处理命令awk 实例学习参考">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -363,7 +367,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/03/02/install-android6-0-on-rpi3/_likes" data-url="/2019/03/02/install-android6-0-on-rpi3/" data-title="在树莓派3上安装Android6.0系统体验" rel="unlike">
+    <span class="leancloud_likes" id="/2019/06/05/awk001/_likes" data-url="/2019/06/05/awk001/" data-title="文本处理命令awk 实例学习参考" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -372,69 +376,222 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<blockquote>
-<p>最近刚刚买了一个树莓派3，之前买过第一代，但是性能比较低，所以买了这个高性能的体验一下。以下就是在树莓派3代上安装android6.0镜像的体验。</p>
+		<p>awk命令是Linux系统里非常强大和功能丰富的文本行处理工具命令，使用方法简单，但是功能丰富，处理文本的速度也非常快。awk是Linux及Unix环境中现有的功能最强大的数据处理引擎之一。强大到一个命令工具拥有了自己的语言，Awk的名字来源于它的三个开发者首字母(Alfred Aho, Peter Weinberger, and Brian Kernighan)， 这款软件在1977年就有了，一直保留至今足以说明其重要性了。当你遇到文本处理问题一筹莫展时，而你恰恰又看到了awk命令的使用方法介绍，那么你会在这里找到你的解决方法的。</p>
+<h2 id="awk语法"><a href="#awk语法" class="headerlink" title="awk语法"></a>awk语法</h2><p>awk的基本使用方法如下：</p>
+<pre><code>pattern { action }
+</code></pre><p><code>pattern</code> 就是模式，用来精准的查找到你要处理的数据位置，支持数值判断，字符串比较，正则匹配等。<br><code>action</code> 就是要对 <code>pattern</code> 查找到的数据行进行处理的逻辑动作，例如输出找到的行数据、统计行数或者是查找是否有你的名字等等。</p>
+<h2 id="awk-pattern语法"><a href="#awk-pattern语法" class="headerlink" title="awk pattern语法"></a>awk pattern语法</h2><p>模式<code>pattern</code>可以是以下任何任何一种格式:</p>
+<pre><code>BEGIN   : 内建模式，表示在处理文件之前的模式操作，我们可以在这个模式中执行一些初始化等预先的动作任务。
+END     : 内建模式，表示在处理文件之后的模式操作，我们可以在这个模式中执行一些展示统计结果等输出的动作任务。
+/regular expression/  ： 正则表达式，支持大部分正则语法，例如 /^[0-9]/ 匹配首部包含数字的行。
+relational expression ： 关系表达式，例如 大于，小于，等于的比较 `$1 &gt; 100` 匹配 第一个字段大于100的行。
+pattern &amp;&amp; pattern    ： 模式与模式的逻辑与，两模式都真时匹配行。
+pattern || pattern    ： 模式与模式的逻辑或，两模式至少一个为真即可匹配行。
+! pattern             ： 模式的逻辑非， 当模式为假时匹配行， 例如 `! $1 &gt; 10` 匹配的是第一个字段不大于10的行数据。
+(pattern)             ： 括号包含的模式，让模式表达的逻辑关系可以更复杂，例如 `($1~/^ABC/ &amp;&amp; $2 &gt; 100) || $1~/^XYZ/` ,匹配 第一列为&quot;ABC&quot;并且第二列大于100的行或者匹配第一列以XYZ开头的行,其实可以更复杂，不过太复杂就不太直观理解，能简单化尽量简单表达。
+pattern1, pattern2    :  范围模式匹配，匹配 `pattern1`和`pattern2`之间的行数据。
+pattern1 ? pattern2 : pattern3 ： 三元运算，这个在Unix系统有可能不支持的，在 `gawk`和`nawk`下通常是支持的， 如果 `pattern1` 为真，则当 `pattern2`为真的行数据匹配成功，如果 `pattern1`为假，则当` pattern3` 为真时匹配行数据， 例如 `$1~/^ABC/ ? $2 &gt; 100 : $1~/^XYZ/` ，预期类似的语法为`($1~/^ABC/ &amp;&amp; $2 &gt; 100) || $1~/^XYZ/` ，所以这个是可以通过其他逻辑表达的，很少用到了。
+
+</code></pre><h2 id="awk-内建变量"><a href="#awk-内建变量" class="headerlink" title="awk 内建变量"></a>awk 内建变量</h2><pre><code>NR：已输入记录的条数。
+NF：当前记录中域的个数。记录中最后一个域可以以$NF的方式引用。
+FILENAME：当前输入文件的文件名。
+FS：“域分隔符”，用于将输入记录分割成域。其默认值为“空白字符”，即空格和制表符。FS可以替换为其它字符，从而改变域分隔符。
+RS：当前的“记录分隔符”。默认状态下，输入的每行都被作为一个记录，因此默认记录分隔符是换行符。
+OFS：“输出域分隔符”，即分隔print命令的参数的符号。其默认值为空格。
+ORS：“输出记录分隔符”，即每个print命令之间的符号。其默认值为换行符。
+OFMT：“输出数字格式”（Format for numeric output），其默认值为&quot;%.6g&quot;。
+</code></pre><h2 id="awk-内建函数"><a href="#awk-内建函数" class="headerlink" title="awk 内建函数"></a>awk 内建函数</h2><h2 id="awk-脚本用法"><a href="#awk-脚本用法" class="headerlink" title="awk 脚本用法"></a>awk 脚本用法</h2><blockquote>
+<p>以一个<code>hello.awk</code>脚本文件为例，说明使用awk脚本方法</p>
 </blockquote>
-<a id="more"></a>
-<p><img src="/img/page/rpi3.jpg" alt="树莓派3"></p>
-<p>先来看下rpi3(树莓派3代简称)的配置信息</p>
-<p>下面是关于树莓派三代与二代的详细硬件配置信息比对说明：</p>
-<pre><code>The Raspberry Pi 3 is the third generation Raspberry Pi. It replaced the Raspberry Pi 2 Model B in February 2016. Compared to the Raspberry Pi 2 it has:
-
-A 1.2GHz 64-bit quad-core ARMv8 CPU
-802.11n Wireless LAN
-Bluetooth 4.1
-Bluetooth Low Energy (BLE)
-
-Like the Pi 2, it also has:
-
-1GB RAM
-4 USB ports
-40 GPIO pins
-Full HDMI port
-Ethernet port
-Combined 3.5mm audio jack and composite video
-Camera interface (CSI)
-Display interface (DSI)
-Micro SD card slot (now push-pull rather than push-push)
-VideoCore IV 3D graphics core
-</code></pre><h1 id="开始为rpi3安装系统步骤"><a href="#开始为rpi3安装系统步骤" class="headerlink" title="开始为rpi3安装系统步骤"></a>开始为rpi3安装系统步骤</h1><pre><code>1. 准备条件说明
-2. 开始刻录镜像到SD卡
-3. 运行系统
-</code></pre><h1 id="详细说明操作步骤内容"><a href="#详细说明操作步骤内容" class="headerlink" title="详细说明操作步骤内容"></a>详细说明操作步骤内容</h1><h2 id="准备条件说明"><a href="#准备条件说明" class="headerlink" title="准备条件说明"></a>准备条件说明</h2><p>硬件准备：rpi3,micro SDcard class 10 (&gt;=8GB) , power (5v , &gt;=2A) 注意最好买比较正规牌子的电源，有些杂牌标记的与实际不符，这又可能导致rpi3运行系统时不稳定而启动失败，HDMI 连接线，显示器;无线键盘鼠标和接收器;<br>软件准备： <a href="http://www.mediafire.com/download/j0zcndz92cg0wwt/andrpi3-20160626.img.bz2" target="_blank" rel="noopener">Android6.0镜像</a>，Linux系统</p>
-<h2 id="开始刻录镜像系统到SD卡"><a href="#开始刻录镜像系统到SD卡" class="headerlink" title="开始刻录镜像系统到SD卡"></a>开始刻录镜像系统到SD卡</h2><ol>
-<li>我们先把<code>andrpi3-20160626.img.bz2</code>镜像下载下来</li>
-<li>用命令bzip2解压生成<code>andrpi3-20160626.img</code>镜像文件</li>
+<ol>
+<li>在<code>awk</code>脚本第一行添加<code>#!/usr/bin/awk -f</code> ,表示这个脚本需要使用 awk 命令进行解析执行;</li>
+<li>创建脚本后，还需要给脚本文件增加<code>可执行权限</code>，命令为<code>chmod +x ./hello.awk</code>。</li>
 </ol>
-<pre><code>bzip2 -x andrpi3-20160626.img.bz2
-</code></pre><ol start="3">
-<li>将microSD卡接入电脑，查看接入时的设备名称（我的笔记本有两块硬盘分别是/dev/sda和/dev/sdb），假设为<code>/dev/sdc</code>，如果是使用SD卡槽接入就会显示为<code>/dev/mmcblk0</code></li>
-<li>使用dd命令将<code>andrpi3-20160626.img</code>写入到<code>/dev/sdc</code>中;</li>
-</ol>
-<pre><code>sudo dd if=andrpi3-20160626.img of=/dev/sdc bs=4M; sync
-</code></pre><ol start="5">
-<li>等待写入完成,卸载sd卡，完成了镜像写入工作。</li>
-</ol>
-<pre><code>umount /dev/sdc
-</code></pre><h2 id="运行系统"><a href="#运行系统" class="headerlink" title="运行系统"></a>运行系统</h2><blockquote>
-<p>注意： rpi3 的功耗比rpi大了很多，所以要使用5V/2A的电源才可以稳定运行，国内一些标记5V/2A的电源，很多都电压不稳，国外网上有人说电压低于4.7V左右时就会引起rpi3不稳定，因此如果遇到了此类问题，就直接更换一个好点的电源插头吧（我用的是锤子官方电源插头:)）。</p>
-</blockquote>
-<p>将rpi3用HDMI线与显示器连接，插入键盘鼠标的无线接收器，再把刻录好的microSD卡插入rpi3卡槽，接通电源线，这样就开始了系统的运行。</p>
-<p>正常情况下，显示器会显示<code>Android</code>字样一段时间，等待一段时间后，就可以进入了欢迎界面了，这样我们就成功的在rpi3运行Android6.0系统了。</p>
-<h2 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h2><p>安装应用方法如下(适用于所有平台，前提安装好adb工具包)：</p>
-<pre><code>adb connect &quot;IP_ADDRESS&quot;
-adb install &quot;app_name.apk&quot;
-</code></pre><p>举个例子，我的rpi3的IP地址为192.168.1.101，安装影梭SS客户端：</p>
-<pre><code>$ adb connect  192.168.1.101
-$ adb install shadowsocks.apk
-1645 KB/s (6261140 bytes in 3.715s)
-    pkg: /data/local/tmp/shadowsocks.apk
-Success
-</code></pre><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://geektillithertz.com/wordpress/index.php/2016/04/09/raspberry-pi-3-android-6-0-marshmallow-download/" target="_blank" rel="noopener">Raspberry Pi 3 Android 6.0 Marshmallow [Download]</a><br><a href="https://www.youtube.com/watch?v=iUc2oJuxk6E" target="_blank" rel="noopener">Raspberry PI 3 How To Install Android 6.0.1 And Google Play</a></p>
+<p>增加完<code>可执行权限</code>后，我们就可以像执行命令一样执行<code>hello.awk</code>脚本了。</p>
+<pre><code>$ chmod +x hello.awk
 
+$ ./hello.awk
+Hello, world!
+
+$ cat hello.awk
+#!/usr/bin/awk -f
+BEGIN { print &quot;Hello, world!&quot; }
+
+</code></pre><p>如果我们<code>hello.awk</code>给脚本命名是 <code>cat</code> 的话，这与系统自带的 <code>cat</code>命令重名了，那么我们怎么知道这个是不是系统命令呢？</p>
+<pre><code>$ file ./cat
+cat: awk script, ASCII text executable
+</code></pre><p>当然，我们可以直接查看这个<code>cat</code>文件内容就可以知道它是一个<code>awk</code>脚本了，然而对于<code>二进制文件</code>的时候<code>file</code>命令就非常有帮助啦。</p>
+<h2 id="awk-实例"><a href="#awk-实例" class="headerlink" title="awk 实例"></a>awk 实例</h2><h3 id="awk-第一个实例"><a href="#awk-第一个实例" class="headerlink" title="awk 第一个实例"></a>awk 第一个实例</h3><p>第一个是<code>Hello World!</code>:</p>
+<pre><code>$ echo &quot;Bob&quot;|awk &#39;BEGIN{ print &quot;Hello &quot;}{ print $0} END{ print &quot;World!&quot;}&#39;
+Hello
+Bob
+World!
+</code></pre><ul>
+<li><code>BEGIN</code>模式是在处理所有数据之前一定要匹配的模式</li>
+<li><code>END</code>模式是在处理完毕所有数据之后一定要匹配的模式(常常用END进行数据展示输出)。</li>
+<li>中间的 <code>{print $0}</code>没有写任何模式，默认会处理所有行数据。</li>
+</ul>
+<h3 id="awk-第二个实例：模式的使用"><a href="#awk-第二个实例：模式的使用" class="headerlink" title="awk 第二个实例：模式的使用"></a>awk 第二个实例：模式的使用</h3><pre><code>awk &#39;$1~/^[0-9]/ &amp;&amp; NF &gt; 1 {
+  total_result += $1
+}
+END{
+  printf(&quot;result: %.0f\n&quot;, total_result);
+}&#39; a.txt
+</code></pre><h3 id="awk-第三个实例：内建变量使用"><a href="#awk-第三个实例：内建变量使用" class="headerlink" title="awk 第三个实例：内建变量使用"></a>awk 第三个实例：内建变量使用</h3><pre><code>awk -F&#39;[, ]&#39; &#39;BEGIN{
+  ## 设置输出域分割符号为冒号:
+  OFS=&quot;:&quot;
+}/^[0-9]/ &amp;&amp; $1 &gt; 1000{
+  print FNR,NR,NF,FILENAME
+}&#39; b.txt a.txt
+3:3:3:b.txt
+4:4:2:b.txt
+5:5:3:b.txt
+6:6:3:b.txt
+1:14:10:a.txt
+2:15:10:a.txt
+3:16:10:a.txt
+4:17:10:a.txt
+5:18:10:a.txt
+
+</code></pre><ul>
+<li>在<code>BEGIN</code>模式中设置了<code>输出域分隔符</code>变量<code>OFS</code>为“:”，之后使用<code>print</code>的默认域分隔符都使用<code>OFS</code>。</li>
+<li>处理文件为两个（a.sh 和 a.txt ） , 此时对比<code>FNR</code>和<code>NR</code>的差异了，<code>NF</code>有时候也会用来格式化过滤一些垃圾数据。</li>
+</ul>
+<h3 id="awk-第四个实例：-逻辑判断和循环控制"><a href="#awk-第四个实例：-逻辑判断和循环控制" class="headerlink" title="awk 第四个实例： 逻辑判断和循环控制"></a>awk 第四个实例： 逻辑判断和循环控制</h3><p>下面是一个统计英文单词频率的实例，使用两种<code>for</code>循环语法</p>
+<pre><code>$  cat vuln.c
+#include&lt;stdio.h&gt;
+
+int main(int argc, char *argv[])
+{
+    char buffer[500];
+    strcpy(buffer, argv[1]);
+    return 0;
+}
+
+$ awk -F&quot;[^a-zA-Z]+&quot; &#39;{
+  for(i=1; i&lt;=NF; ++i)
+  {
+    words[tolower($i)]++
+  }
+}
+END {
+    for(i in words)
+    {
+      if( words[i])
+      {
+        print i, words[i]
+      }
+    }
+}&#39; vuln.c
+argv 2
+char 2
+h 1
+ 13
+strcpy 1
+buffer 2
+main 1
+argc 1
+return 1
+stdio 1
+include 1
+int 2
+
+</code></pre><ul>
+<li><code>for</code>循环的语法中，我比较常用的是 <code>for( i in words)</code>这种， 利用哈希(<code>hash</code>)进行数据存储和查询使用起来非常方便，也经常用到统计分析数据中。</li>
+</ul>
+<h3 id="awk-第五个实例：-结合Shell使用"><a href="#awk-第五个实例：-结合Shell使用" class="headerlink" title="awk 第五个实例： 结合Shell使用"></a>awk 第五个实例： 结合Shell使用</h3><p>这个<code>grepinawk</code>脚本执行起来非常类似<code>grep -H</code>命令：</p>
+<pre><code>$ cat grepinawk
+pattern=$1
+shift
+awk &#39;/&#39;$pattern&#39;/ { print FILENAME &quot;:&quot; $0 }&#39; $*
+
+$ ./grepinawk strcpy vuln.c
+vuln.c:    strcpy(buffer, argv[1]);
+
+$ grep -H strcpy vuln.c
+vuln.c:    strcpy(buffer, argv[1]);
+
+</code></pre><ul>
+<li>这个<code>awk</code>脚本结合了<code>shell</code>脚本的参数实现了类似<code>grep</code>命令的功能</li>
+<li><code>grepinawk</code> 脚本第一个参数传递给 <code>pattern</code>变量 ， 然后通过 <code>shift</code> 从参数列表中删去。</li>
+<li><code>$*</code> 记录的是去掉了地一个参数的参数列表了，这就达到了<code>grep</code> 命令的简单实现。</li>
+</ul>
+<h3 id="awk-第六个实例：awk内建函数的使用"><a href="#awk-第六个实例：awk内建函数的使用" class="headerlink" title="awk 第六个实例：awk内建函数的使用"></a>awk 第六个实例：awk内建函数的使用</h3><pre><code>## 统计一下本机都与哪些外部地址有TCP连接方法
+
+netstat -tn | awk &#39;/ESTABLISHED/{
+  LocalAddress   = $4;
+  ForeignAddress = $5;
+  ## 按照冒号分割 ForeignAddress 字段内容
+  n = split(ForeignAddress, arr , &quot;:&quot;)
+  if( n == 2)
+  {
+    address[ arr[1] ] ++
+  }
+}END{
+  for( i in address)
+  {
+    printf(&quot;%-18s %-5.0f\n&quot;, i, address[ i ]);
+  }
+}&#39;
+
+
+## 方法二
+netstat -tn | awk &#39;/ESTABLISHED/{
+  gsub(&quot;:&quot;, &quot; &quot;);
+  i=$6;
+  address[ i ]++
+}
+END{
+  for( i in address)
+  {
+    printf(&quot;%-18s %-5.0f\n&quot;, i, address[ i ]);
+  }
+}&#39;
+
+</code></pre><ul>
+<li>这个实例使用了<code>split</code>内建函数，可以将数据重新进行拆分成一个数组，然后返回值为数组数量，需要记住，数组下表是从<code>1</code>开始的，并不是像<code>C语言</code>从0开始的。</li>
+<li>方法二通过使用 <code>gsub</code> 函数也实现了同样效果。</li>
+</ul>
+<h3 id="awk-第七个实例：-重定向输出和管道的使用"><a href="#awk-第七个实例：-重定向输出和管道的使用" class="headerlink" title="awk 第七个实例： 重定向输出和管道的使用"></a>awk 第七个实例： 重定向输出和管道的使用</h3><p>一个awk命令可能有很多输出内容，并且需要保存到不同名称的文件中，这时候就需要使用重定向输出啦：</p>
+<pre><code>netstat -tn | awk &#39;/^tcp/{
+  state = $NF
+  print $0 &gt; &quot;/tmp/test/&quot;$NF
+  printf(&quot;%-20s %-20s %-s\n&quot;, $4,$5,$6) | &quot;sort&quot;
+}&#39;
+</code></pre><h3 id="awk-第八个实例：-函数的使用"><a href="#awk-第八个实例：-函数的使用" class="headerlink" title="awk 第八个实例： 函数的使用"></a>awk 第八个实例： 函数的使用</h3><pre><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;$ cat b.txt
+100 200 300
+1000 40302 2130130
+12309 10201 10210
+1201 102109
+12031 102101 2101
+10201 1010 111
+10 11121
+990 1024
+4 101
+29 4010
+11 230
+5 102
+7 1021 1012 101
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;$ awk &#39;function add (n1, n2) {
+  return n1 + n2
+}
+$1&gt; 100{
+  printf(&quot;%-8.0f + %-8.0f = %10.0f\n&quot;, $1 , $2 , add( $1, $2))
+}&#39; b.txt
+
+1000     + 40302    =      41302
+12309    + 10201    =      22510
+1201     + 102109   =     103310
+12031    + 102101   =     114132
+10201    + 1010     =      11211
+990      + 1024     =       2014
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;$
+</code></pre>
 	</div>
 
-	<div id="current-post-cover" data-scr="/img/post-cover/raspberry-pi-android-support-google.jpg"></div>
+	<div id="current-post-cover" data-scr="/img/post-cover/awk.jpeg"></div>
 
 	<!-- relate post, comment...-->
 	<div class="investment-container">
@@ -448,10 +605,10 @@ Success
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/03/02/hello-world/" title="Hello World" rel="prev">
-				&laquo;上一篇
-			</a>
 		
+			<a href="/2019/05/30/ubuntu界面美化方法/" title="Ubuntu 18.04 LTS 界面美化方法" rel="next">
+				下一篇&raquo;
+			</a>
 			
 	</span>
     
@@ -464,22 +621,6 @@ Success
 
 <div class="relate-post">
 	<ul>
-		
-				<li>
-					<div>
-						<a href="/2019/06/05/awk001/" title="文本处理命令awk 实例学习参考">
-							文本处理命令awk 实例学习参考
-						</a>
-						<p>
-							awk命令是Linux系统里非常强大和功能丰富的文本行处理工具命令，使用方法简单，但是功能丰富，处理文本的速度也非常快。awk是Linux及Unix环境中现有的功能最强大的数据处理引擎之一。强大到一个命令工具拥有了自己的语言，Awk的...
-						</p>
-					</div>
-
-					<a href="/2019/06/05/awk001/" title="文本处理命令awk 实例学习参考">				
-						<img src="/img/post-cover/awk.jpeg" class="relateImg" alt="文本处理命令awk 实例学习参考">
-					</a>
-				</li>											
-		
 		
 				<li>
 					<div>
@@ -548,16 +689,22 @@ Success
 		
 				<li>
 					<div>
-						<a href="/2019/05/20/huawei-vs-android/" title="谷歌与华为的部分手机业务停止合作">
-							谷歌与华为的部分手机业务停止合作
+						<a href="/2019/03/02/install-android6-0-on-rpi3/" title="在树莓派3上安装Android6.0系统体验">
+							在树莓派3上安装Android6.0系统体验
 						</a>
 						<p>
-							根据 Android policy网站最新消息获悉原文，根据美国政府要求谷歌将停止与华为进行部分合作。很多新闻都在说谷歌已经禁止了对华为手机提供 Google Play Store 和 其他谷歌服务，那么实时到底是什么呢？ 如果停止了...
+							
+最近刚刚买了一个树莓派3，之前买过第一代，但是性能比较低，所以买了这个高性能的体验一下。以下就是在树莓派3代上安装android6.0镜像的体验。
+
+
+
+先来看下rpi3(树莓派3代简称)的配置信息
+下面是关于树莓派三代与二代的详细...
 						</p>
 					</div>
 
-					<a href="/2019/05/20/huawei-vs-android/" title="谷歌与华为的部分手机业务停止合作">				
-						<img src="/img/post-cover/google_play_china.jpg" class="relateImg" alt="谷歌与华为的部分手机业务停止合作">
+					<a href="/2019/03/02/install-android6-0-on-rpi3/" title="在树莓派3上安装Android6.0系统体验">				
+						<img src="/img/post-cover/raspberry-pi-android-support-google.jpg" class="relateImg" alt="在树莓派3上安装Android6.0系统体验">
 					</a>
 				</li>											
 		
@@ -576,6 +723,22 @@ Success
 
 					<a href="/2019/05/29/taobao-promoto/" title="2019天猫618活动主题会场优惠券">				
 						<img src="/img/post-cover/taobao-prompto.jpeg" class="relateImg" alt="2019天猫618活动主题会场优惠券">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/05/20/huawei-vs-android/" title="谷歌与华为的部分手机业务停止合作">
+							谷歌与华为的部分手机业务停止合作
+						</a>
+						<p>
+							根据 Android policy网站最新消息获悉原文，根据美国政府要求谷歌将停止与华为进行部分合作。很多新闻都在说谷歌已经禁止了对华为手机提供 Google Play Store 和 其他谷歌服务，那么实时到底是什么呢？ 如果停止了...
+						</p>
+					</div>
+
+					<a href="/2019/05/20/huawei-vs-android/" title="谷歌与华为的部分手机业务停止合作">				
+						<img src="/img/post-cover/google_play_china.jpg" class="relateImg" alt="谷歌与华为的部分手机业务停止合作">
 					</a>
 				</li>											
 		
